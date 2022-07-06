@@ -1,5 +1,6 @@
 import React from 'react';
 import photo from '../img1.jpg';
+import './styles/photo.css';
 
 function Photo() {
   return (
