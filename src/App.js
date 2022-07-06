@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Heading from './Components/Heading';
+import Photo from './Components/Photo';
 import Timer from './Components/Timer';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         timerStatus={timerStatus}
         startTimer={startTimer}
       />
+      <Photo />
     </div>
   );
 }
