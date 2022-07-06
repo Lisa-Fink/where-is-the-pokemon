@@ -24,6 +24,8 @@ function Heading({ score, chars }) {
         src={char.img}
         alt={`thumbnail of ${char.name}`}
         className={chars.includes(char.name) ? 'found' : 'unfound'}
+        id={char.name}
+        key={char.name}
       />
     );
   });
