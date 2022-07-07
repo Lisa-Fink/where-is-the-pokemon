@@ -1,23 +1,18 @@
 import React from 'react';
 import Timer from './Timer';
-import gengar from '../pokemon/gengar.webp';
-import bulb from '../pokemon/bulbasaur.webp';
-import geo from '../pokemon/geo.webp';
-import horsea from '../pokemon/horsea.webp';
-import ivy from '../pokemon/ivysaur.webp';
-import jiggly from '../pokemon/jiggly.webp';
-import mime from '../pokemon/mime.webp';
+import './styles/heading.css';
+import charsArr from './charArr';
 
-function Heading({ score, chars }) {
-  const charsArr = [
-    { name: 'Gengar', img: gengar },
-    { name: 'Bulbasaur', img: bulb },
-    { name: 'Geodude', img: geo },
-    { name: 'Horsea', img: horsea },
-    { name: 'Ivysaur', img: ivy },
-    { name: 'Jigglypuff', img: jiggly },
-    { name: 'Mr. Mime', img: mime },
-  ];
+function Heading({
+  score,
+  chars,
+  seconds,
+  setSeconds,
+  minutes,
+  setMinutes,
+  timerStatus,
+  startTimer,
+}) {
   const charpics = charsArr.map((char) => {
     return (
       <img
@@ -33,6 +28,14 @@ function Heading({ score, chars }) {
     <div className="heading">
       <h1>Where is The Pokemon?</h1>
       <div>{charpics}</div> <div>{score} / 7</div>
+      <Timer
+        seconds={seconds}
+        setSeconds={setSeconds}
+        minutes={minutes}
+        setMinutes={setMinutes}
+        timerStatus={timerStatus}
+        startTimer={startTimer}
+      />
     </div>
   );
 }
