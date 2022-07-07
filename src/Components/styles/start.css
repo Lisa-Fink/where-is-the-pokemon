@@ -1,0 +1,41 @@
+.char-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.start {
+    width: 400px;
+    margin: 120px auto;
+}
+
+.start h2 {
+    text-align: center;
+}
+
+.start-button{
+    display: flex;
+    justify-content: center;
+    padding: 50px
+}
+
+.start button {
+    font-size: larger;
+    padding: 20px;
+    border-radius: 15px;
+    border: 5px solid white;
+}
+
+.start button:hover {
+    border: 5px solid red;
+    color: red;
+    background-color: yellow;
+}
+
+.char-grid {
+    display: flex;
+    flex-direction: column;
+}
+

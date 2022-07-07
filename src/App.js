@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Heading from './Components/Heading';
 import Photo from './Components/Photo';
+import Start from './Components/Start';
 import Timer from './Components/Timer';
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <Heading score={score} chars={chars} />
-      <Timer
+      <Heading
+        score={score}
+        chars={chars}
         seconds={seconds}
         setSeconds={setSeconds}
         minutes={minutes}
@@ -27,7 +29,8 @@ function App() {
         timerStatus={timerStatus}
         startTimer={startTimer}
       />
-      <Photo />
+
+      {timerStatus ? <Photo /> : <Start startTimer={startTimer} />}
     </div>
   );
 }
