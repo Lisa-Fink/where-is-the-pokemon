@@ -13,6 +13,7 @@
     border-radius: 15px;
     padding: 25px;
     border: 5px solid red;
+    text-align: center;
 }
 
 
@@ -43,3 +44,6 @@
     flex-direction: column;
 }
 
+.char-grid img {
+    width: 80px;
+}
