@@ -2,7 +2,7 @@ import React from 'react';
 import charsArr from './charArr';
 import './styles/start.css';
 
-function Start({ startTimer }) {
+function Start({ startGame }) {
   const charGrid = charsArr.map((char) => {
     return (
       <div className="char-grid" key={char.name}>
@@ -18,7 +18,7 @@ function Start({ startTimer }) {
       the leaderboard!
       <div className="char-container">{charGrid}</div>
       <div className="start-button">
-        <button onClick={startTimer}>Start Game</button>
+        <button onClick={startGame}>Start Game</button>
       </div>
     </div>
   );
