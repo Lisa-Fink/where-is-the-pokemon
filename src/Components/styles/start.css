@@ -9,7 +9,12 @@
 .start {
     width: 400px;
     margin: 120px auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    border: 5px solid red;
 }
+
 
 .start h2 {
     text-align: center;
@@ -31,7 +36,6 @@
 .start button:hover {
     border: 5px solid red;
     color: red;
-    background-color: yellow;
 }
 
 .char-grid {
