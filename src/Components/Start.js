@@ -14,8 +14,10 @@ function Start({ startGame }) {
   return (
     <div className="start">
       <h2>Where is The Pokemon?</h2>
-      Find These Pokemon Find them all in a fast enough time to earn a spot on
-      the leaderboard!
+      <div>Find These Pokemon</div>
+      <div>
+        Find them all in a fast enough time to earn a spot on the leaderboard!
+      </div>
       <div className="char-container">{charGrid}</div>
       <div className="start-button">
         <button onClick={startGame}>Start Game</button>
