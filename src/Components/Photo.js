@@ -5,7 +5,7 @@ import { initializeApp, firebase } from 'firebase/app';
 import { getDocs, collection, getFirestore, doc } from 'firebase/firestore';
 import firebaseConfig from './firebaseConfig';
 
-function Photo() {
+function Photo({ charsClicked, setCharsClicked }) {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
@@ -46,13 +46,22 @@ function Photo() {
     return false;
   };
 
+  const processClick = async (e) => {
+    const success = await checkLocations(e);
+    // if successful and successful wasn't already clicked
+    if (success && !charsClicked.includes(success)) {
+      console.log('success', 'charsArr: ', charsClicked, success);
+      setCharsClicked([...charsClicked, success]);
+    }
+  };
+
   return (
     <div>
       <img
         src={photo}
         alt="big pokemon pic"
         className="bigpokemon"
-        onClick={checkLocations}
+        onClick={processClick}
       />
     </div>
   );
