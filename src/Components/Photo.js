@@ -1,11 +1,11 @@
-import React from 'react';
 import photo from '../img1.jpg';
 import './styles/photo.css';
-import { initializeApp, firebase } from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 import { getDocs, collection, getFirestore, doc } from 'firebase/firestore';
 import firebaseConfig from './firebaseConfig';
+import GameWon from './GameWon';
 
-function Photo({ charsClicked, setCharsClicked }) {
+function Photo({ charsClicked, setCharsClicked, gameStatus, newGame, score }) {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
@@ -57,6 +57,7 @@ function Photo({ charsClicked, setCharsClicked }) {
 
   return (
     <div>
+      {gameStatus === 'win' && <GameWon newGame={newGame} score={score} />}
       <img
         src={photo}
         alt="big pokemon pic"
