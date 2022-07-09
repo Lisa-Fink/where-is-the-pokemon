@@ -21,24 +21,20 @@ function Photo({ charsClicked, setCharsClicked, gameStatus, newGame, score }) {
           name: doc.data().name,
         });
       });
-      console.log(locations);
       return locations;
     } catch (e) {
       console.log('error retrieving data: ', e);
     }
   };
   const checkLocations = async (e) => {
-    console.log(e.pageX - e.target.offsetLeft, e.pageY - e.target.offsetTop);
     const x = e.pageX - e.target.offsetLeft;
     const y = e.pageY - e.target.offsetTop;
     const locations = await getLocations();
-    console.log('locations in check', locations);
     const checkX = locations.filter((obj) => Math.abs(obj.x - x) <= 20);
     if (checkX.length) {
       const checkY = checkX.filter((obj) => Math.abs(obj.y - y) <= 20);
       if (checkY.length) {
         // need to do something if more than 1 is in range
-        console.log(checkY[0].name);
         return checkY[0].name;
       }
     }
@@ -50,7 +46,6 @@ function Photo({ charsClicked, setCharsClicked, gameStatus, newGame, score }) {
     const success = await checkLocations(e);
     // if successful and successful wasn't already clicked
     if (success && !charsClicked.includes(success)) {
-      console.log('success', 'charsArr: ', charsClicked, success);
       setCharsClicked([...charsClicked, success]);
     }
   };
