@@ -4,8 +4,7 @@ import './styles/heading.css';
 import charsArr from './charArr';
 
 function Heading({
-  score,
-  chars,
+  charsClicked,
   seconds,
   setSeconds,
   minutes,
@@ -18,24 +17,25 @@ function Heading({
       <img
         src={char.img}
         alt={`thumbnail of ${char.name}`}
-        className={chars.includes(char.name) ? 'found' : 'unfound'}
+        className={charsClicked.includes(char.name) ? 'found' : 'unfound'}
         id={char.name}
         key={char.name}
       />
     );
   });
+  const score = charsClicked.length;
   return (
     <div className="heading">
       <h1>Where is The Pokemon?</h1>
       <div>{charpics}</div> <div>{score} / 7</div>
-      <Timer
+      {/* <Timer
         seconds={seconds}
         setSeconds={setSeconds}
         minutes={minutes}
         setMinutes={setMinutes}
         timerStatus={timerStatus}
         startTimer={startTimer}
-      />
+      /> */}
     </div>
   );
 }
