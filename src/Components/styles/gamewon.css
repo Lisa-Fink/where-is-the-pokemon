@@ -1,0 +1,11 @@
+.large-winner {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(128, 128, 128, .80);
+
+}
+
+.winner {
+    position:relative;
+}
