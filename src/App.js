@@ -14,14 +14,12 @@ function App() {
   const stopTimer = () => setTimerStatus(false);
   const resetTimer = () => setSeconds(0);
 
-  const [score, setScore] = useState(0);
-  const [chars, setChars] = useState([]);
+  const [charsClicked, setCharsClicked] = useState([]);
 
   return (
     <div className="App">
       <Heading
-        score={score}
-        chars={chars}
+        charsClicked={charsClicked}
         seconds={seconds}
         setSeconds={setSeconds}
         minutes={minutes}
@@ -30,7 +28,11 @@ function App() {
         startTimer={startTimer}
       />
 
-      {timerStatus ? <Photo /> : <Start startTimer={startTimer} />}
+      {timerStatus ? (
+        <Photo charsClicked={charsClicked} setCharsClicked={setCharsClicked} />
+      ) : (
+        <Start startTimer={startTimer} />
+      )}
     </div>
   );
 }
