@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Where-is-The-Pokemon/static/css/main.9bc19ece.css",
-    "main.js": "/Where-is-The-Pokemon/static/js/main.af2a5586.js",
-    "static/media/img1.jpg": "/Where-is-The-Pokemon/static/media/img1.a5b1d396aa703013d34c.jpg",
-    "static/media/mime.webp": "/Where-is-The-Pokemon/static/media/mime.aefd9c447e02ff49834b.webp",
-    "static/media/ivysaur.webp": "/Where-is-The-Pokemon/static/media/ivysaur.3a29e66208686f397d6f.webp",
-    "static/media/bulbasaur.webp": "/Where-is-The-Pokemon/static/media/bulbasaur.88dcf95612e71ce78eef.webp",
-    "static/media/jiggly.webp": "/Where-is-The-Pokemon/static/media/jiggly.f504c71d29f8fc33d7e2.webp",
-    "static/media/charmander.webp": "/Where-is-The-Pokemon/static/media/charmander.a20430d605de29152cd2.webp",
-    "static/media/horsea.webp": "/Where-is-The-Pokemon/static/media/horsea.2c07197ce445dac00970.webp",
-    "static/media/gengar.webp": "/Where-is-The-Pokemon/static/media/gengar.9610802b4c69c60301b1.webp",
-    "static/media/pokeball.webp": "/Where-is-The-Pokemon/static/media/pokeball.d56f1a890861750f2229.webp",
-    "index.html": "/Where-is-The-Pokemon/index.html",
-    "main.9bc19ece.css.map": "/Where-is-The-Pokemon/static/css/main.9bc19ece.css.map",
-    "main.af2a5586.js.map": "/Where-is-The-Pokemon/static/js/main.af2a5586.js.map"
+    "main.css": "/static/css/main.c9552845.css",
+    "main.js": "/static/js/main.188c8f27.js",
+    "static/media/img1.jpg": "/static/media/img1.a5b1d396aa703013d34c.jpg",
+    "index.html": "/index.html",
+    "static/media/mime.webp": "/static/media/mime.aefd9c447e02ff49834b.webp",
+    "static/media/ivysaur.webp": "/static/media/ivysaur.3a29e66208686f397d6f.webp",
+    "static/media/bulbasaur.webp": "/static/media/bulbasaur.88dcf95612e71ce78eef.webp",
+    "static/media/jiggly.webp": "/static/media/jiggly.f504c71d29f8fc33d7e2.webp",
+    "static/media/charmander.webp": "/static/media/charmander.a20430d605de29152cd2.webp",
+    "static/media/horsea.webp": "/static/media/horsea.2c07197ce445dac00970.webp",
+    "static/media/gengar.webp": "/static/media/gengar.9610802b4c69c60301b1.webp",
+    "static/media/pokeball.webp": "/static/media/pokeball.d56f1a890861750f2229.webp",
+    "main.c9552845.css.map": "/static/css/main.c9552845.css.map",
+    "main.188c8f27.js.map": "/static/js/main.188c8f27.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bc19ece.css",
-    "static/js/main.af2a5586.js"
+    "static/css/main.c9552845.css",
+    "static/js/main.188c8f27.js"
   ]
 }
