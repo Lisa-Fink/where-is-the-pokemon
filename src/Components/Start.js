@@ -2,7 +2,7 @@ import React from 'react';
 import charsArr from './charArr';
 import './styles/start.css';
 
-function Start({ startGame }) {
+function Start({ startGame, name, setName }) {
   const charGrid = charsArr.map((char) => {
     return (
       <div className="char-grid" key={char.name}>
@@ -11,6 +11,10 @@ function Start({ startGame }) {
       </div>
     );
   });
+
+  const nameChange = (e) => {
+    setName(e.target.value);
+  };
   return (
     <div className="start">
       <h2>Where is The Pokemon?</h2>
@@ -19,6 +23,13 @@ function Start({ startGame }) {
         Find them all in a fast enough time to earn a spot on the leaderboard!
       </div>
       <div className="char-container">{charGrid}</div>
+      <div className="name">
+        <input
+          onChange={nameChange}
+          value={name}
+          placeholder="Enter Your Name"
+        />
+      </div>
       <div className="start-button">
         <button onClick={startGame}>Start Game</button>
       </div>
