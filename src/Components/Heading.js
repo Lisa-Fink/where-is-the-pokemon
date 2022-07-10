@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Timer from './Timer';
 import './styles/heading.css';
 import charsArr from './charArr';
@@ -28,14 +28,13 @@ function Heading({
     <div className="heading">
       <h1>Where is The Pokemon?</h1>
       <div>{charpics}</div> <div>{score} / 7</div>
-      {/* <Timer
+      <Timer
         seconds={seconds}
         setSeconds={setSeconds}
         minutes={minutes}
         setMinutes={setMinutes}
         timerStatus={timerStatus}
-        startTimer={startTimer}
-      /> */}
+      />
     </div>
   );
 }
