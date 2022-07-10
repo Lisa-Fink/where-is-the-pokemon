@@ -5,7 +5,14 @@ import { getDocs, collection, getFirestore, doc } from 'firebase/firestore';
 import firebaseConfig from './firebaseConfig';
 import GameWon from './GameWon';
 
-function Photo({ charsClicked, setCharsClicked, gameStatus, newGame, score }) {
+function Photo({
+  charsClicked,
+  setCharsClicked,
+  gameStatus,
+  newGame,
+  score,
+  name,
+}) {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
@@ -29,7 +36,6 @@ function Photo({ charsClicked, setCharsClicked, gameStatus, newGame, score }) {
   const checkLocations = async (e) => {
     const x = e.pageX - e.target.offsetLeft;
     const y = e.pageY - e.target.offsetTop;
-    console.log('x:', x, 'y:', y);
     const locations = await getLocations();
     for (const obj of locations) {
       // obj.x and obj.y are arrays containing 4 values for x and y outlining a
@@ -59,7 +65,9 @@ function Photo({ charsClicked, setCharsClicked, gameStatus, newGame, score }) {
 
   return (
     <div>
-      {gameStatus === 'win' && <GameWon newGame={newGame} score={score} />}
+      {gameStatus === 'win' && (
+        <GameWon newGame={newGame} score={score} db={db} name={name} />
+      )}
       <img
         src={photo}
         alt="big pokemon pic"
