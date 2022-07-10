@@ -9,3 +9,37 @@
 .winner {
     position:relative;
 }
+
+.highscore-list {
+    padding: 15px;
+}
+
+.highscore-row {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0px
+}
+
+.highscore-row > div {
+    width: 80px;
+    text-align: left;
+}
+
+#highscore-title {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.rank {
+    border: 2px black solid;
+    width: min-content;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    background-color: red;
+    font-weight: bold;
+    border-radius: 15px;
+
+}
