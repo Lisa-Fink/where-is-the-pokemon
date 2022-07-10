@@ -3,7 +3,6 @@ import './App.css';
 import Heading from './Components/Heading';
 import Photo from './Components/Photo';
 import Start from './Components/Start';
-import Timer from './Components/Timer';
 
 function App() {
   const [seconds, setSeconds] = useState(0);
@@ -13,11 +12,17 @@ function App() {
 
   const startTimer = () => setTimerStatus(true);
   const stopTimer = () => setTimerStatus(false);
-  const resetTimer = () => setSeconds(0);
+  const resetTimer = () => {
+    setSeconds(0);
+    setMinutes(0);
+  };
 
   const startGame = () => {
     startTimer();
     setGameStatus('playing');
+    if (name === '') {
+      setName('Pokemon Trainer');
+    }
   };
 
   const newGame = () => {
@@ -26,6 +31,7 @@ function App() {
     startGame();
   };
 
+  const [name, setName] = useState('');
   const [score, setScore] = useState([]);
   const [charsClicked, setCharsClicked] = useState([]);
 
@@ -52,7 +58,6 @@ function App() {
         minutes={minutes}
         setMinutes={setMinutes}
         timerStatus={timerStatus}
-        startTimer={startTimer}
       />
 
       {gameStatus !== 'start' ? (
@@ -62,9 +67,10 @@ function App() {
           gameStatus={gameStatus}
           newGame={newGame}
           score={score}
+          name={name}
         />
       ) : (
-        <Start startGame={startGame} />
+        <Start startGame={startGame} setName={setName} name={name} />
       )}
     </div>
   );
