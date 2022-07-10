@@ -10,7 +10,6 @@ function Heading({
   minutes,
   setMinutes,
   timerStatus,
-  startTimer,
 }) {
   const charpics = charsArr.map((char) => {
     return (
@@ -27,7 +26,7 @@ function Heading({
   return (
     <div className="heading">
       <h1>Where is The Pokemon?</h1>
-      <div>{charpics}</div> <div>{score} / 7</div>
+      <div>{charpics}</div> <div id="score">{score} / 7</div>
       <Timer
         seconds={seconds}
         setSeconds={setSeconds}

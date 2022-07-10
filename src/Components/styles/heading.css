@@ -13,3 +13,14 @@
 .found {
     opacity: .4 
 }
+
+#score {
+    font-weight: bold;
+    color:red;
+    font-size: 28px;
+}
+
+.timer {
+    font-weight: 900;
+    font-size: 28px;
+}
